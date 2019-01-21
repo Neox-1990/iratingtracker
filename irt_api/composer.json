@@ -1,0 +1,18 @@
+{
+    "name": "ronaldg/irt_api",
+    "authors": [
+        {
+            "name": "Ronald Großmann",
+            "email": "dev@ronaldg.de"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.3",
+        "larapack/dd": "^1.1"
+    },
+    "autoload": {
+    "psr-4": {
+      "Ronaldg\\Irt_api\\":"src/"
+    }
+  }
+}

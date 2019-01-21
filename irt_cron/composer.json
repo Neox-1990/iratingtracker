@@ -1,0 +1,12 @@
+{
+    "name": "ronaldg/irt",
+    "authors": [
+        {
+            "name": "Ronald Großmann",
+            "email": "dev@ronaldg.net"
+        }
+    ],
+    "require": {
+        "league/csv": "^9.1"
+    }
+}
