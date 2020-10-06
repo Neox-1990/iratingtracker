@@ -1,13 +1,13 @@
 <?php
 namespace Ronaldg\Irt_api\Actions;
 
-class GetSingle extends \Ronaldg\Irt_api\Action
+class RawNation extends \Ronaldg\Irt_api\Action
 {
     public function retrieveData(\PDO $dblink, string $discipline, $idString, $filterString, $optionString, $formatString)
     {
         if (mb_ereg("[0-9]+", $idString) === false) {
-            header('Content-type:application/json;charset=utf-8');
-            echo json_encode([]);
+            header('Content-type:text/plain;charset=utf-8');
+            echo "";
         } else {
             $id = intval($idString);
         }
@@ -21,12 +21,12 @@ class GetSingle extends \Ronaldg\Irt_api\Action
         if ($stm->execute()) {
             $row = $stm->fetch(\PDO::FETCH_ASSOC);
         } else {
-            header('Content-type:application/json;charset=utf-8');
-            echo json_encode([]);
+            header('Content-type:text/plain;charset=utf-8');
+            echo "";
         }
 
-        header('Content-type:application/json;charset=utf-8');
-        echo json_encode(empty($row) ? [] : $row);
+        header('Content-type:text/plain;charset=utf-8');
+        echo empty($row) ? "" : $row['location'];
 
         //return empty($row) ? [] : $row;
     }
