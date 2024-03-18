@@ -2,4 +2,4 @@
 RewriteEngine On
 RewriteBase /
 RewriteRule ^\.htaccess$ - [F]
-RewriteRule ^(road|oval|dirt_road|dirt_oval)\/$ get.php?discipline=$1 [QSA]
+RewriteRule ^(sports_car|formula_car|road|oval|dirt_road|dirt_oval)\/$ get.php?discipline=$1 [QSA]
